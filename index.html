@@ -3,20 +3,78 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simple Page</title>
+  <title>INS North Campus — Info</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#f7fafc;color:#0f1724}
-    .wrap{max-width:720px;padding:28px;border-radius:10px;background:#ffffff;border:1px solid #e6eef6;box-shadow:0 6px 20px rgba(15,23,36,0.06);text-align:center}
-    h1{margin:0 0 8px;font-size:24px}
-    p{margin:0 0 16px;color:#475569}
-    a.btn{display:inline-block;padding:8px 14px;border-radius:8px;border:1px solid #c7e2ff;text-decoration:none;color:#0369a1}
+    :root{--accent:#0369a1;--muted:#6b7280}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0;background:#f8fafc;color:#0f1724}
+    .container{max-width:980px;margin:32px auto;padding:20px}
+    header{display:flex;align-items:center;gap:16px}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .card{background:#fff;border:1px solid #e6eef6;border-radius:12px;padding:16px;margin-top:18px;box-shadow:0 8px 30px rgba(2,6,23,0.04)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:16px}
+    .services{display:flex;flex-wrap:wrap;gap:10px}
+    .service{background:#f1f9ff;padding:8px 10px;border-radius:8px;border:1px solid #e0f2fe;color:var(--accent)}
+    .contact dt{font-weight:700}
+    iframe.map{width:100%;height:220px;border:0;border-radius:8px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media(max-width:820px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <h1>Simple HTML Page</h1>
-    <p>This is a clean, minimal HTML template — no tree, just a simple page you can build on.</p>
-    <a class="btn" href="#" onclick="alert('You clicked the button!')">Try button</a>
-  </main>
+  <div class="container">
+    <header>
+      <div>
+        <h1>INS North Campus</h1>
+        <p class="lead">Training & education centre in North Delhi area — courses, coaching, and computer training.</p>
+      </div>
+    </header>
+
+    <div class="card grid">
+      <div>
+        <section>
+          <h2>About</h2>
+          <p>INS North Campus is a local educational/training centre around the North Delhi / Mukherjee Nagar area. It offers language classes, computer training, management and software courses, and other short-term professional programs tailored for students and working professionals.</p>
+        </section>
+
+        <section style="margin-top:12px">
+          <h2>Popular services</h2>
+          <div class="services">
+            <div class="service">Computer Training</div>
+            <div class="service">Tally & Accounting</div>
+            <div class="service">Language Classes (English, French)</div>
+            <div class="service">Management Coaching</div>
+            <div class="service">Exam Preparation</div>
+          </div>
+        </section>
+
+        <section style="margin-top:12px">
+          <h2>Notes</h2>
+          <p class="muted">Location and offerings can vary by branch. If you're planning to visit, call ahead or check the specific branch page for up-to-date timings and course schedules.</p>
+        </section>
+      </div>
+
+      <aside>
+        <div class="contact card" style="padding:12px;box-shadow:none;border:none">
+          <h3 style="margin-top:0">Contact</h3>
+          <dl>
+            <dt>Address</dt>
+            <dd>Hudson Lane / Mukherjee Nagar / Shalimar Bagh area, North Delhi (approximate)</dd>
+            <dt style="margin-top:8px">Phone</dt>
+            <dd>Varies by branch — check local listing</dd>
+            <dt style="margin-top:8px">Nearby</dt>
+            <dd>GTB Nagar Metro / GTB Nagar area</dd>
+          </dl>
+          <div style="margin-top:12px">
+            <iframe class="map" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=INS+North+Campus+Mukherjee+Nagar+Delhi&output=embed"></iframe>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>Content compiled from local listings and directory pages. This page is a simple informational template — update it with exact contact details when available.</p>
+    </footer>
+  </div>
 </body>
 </html>
